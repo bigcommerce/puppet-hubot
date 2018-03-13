@@ -24,9 +24,7 @@
   },
 
   "dependencies": {
-    <% @dependencies.each_pair do |key, value| %>
-    "<%= key %>": "<%= value %>",
-    <% end %>
+    <% @dependencies.each_pair do |key, value| %>"<%= key %>": "<%= value %>",<% end %>
   },
 
   "engines": {

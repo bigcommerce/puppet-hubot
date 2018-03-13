@@ -14,7 +14,7 @@
   "description": "A simple helpful robot for your Company",
 
   "dependencies": {
-    <%= @dependencies.map{ |key, value| "#{key}: #{value}" }.join(",\n    ") %>
+    <%= @dependencies.map{|key, value| %Q("#{key}": "#{value}")}.join(",\n    ") %>
   },
 
   "engines": {

@@ -180,14 +180,5 @@ class hubot::config {
       require => Exec['Hubot init'],
     }
 
-    file { "${::hubot::root_dir}/${::hubot::bot_name}/package.json":
-      ensure  => 'file',
-      owner   => 'hubot',
-      group   => 'hubot',
-      mode    => '0444',
-      content => template('hubot/package.json.erb'),
-      notify  => Class['hubot::service'],
-      require => Exec['Hubot init'],
-    }
   }
 }
